@@ -2,7 +2,7 @@
 /datasets
 /datasets_full
 *.pth
-*.png
+.DS_Store
 
 
 
