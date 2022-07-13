@@ -1,6 +1,7 @@
 # PA4Inpaint
 [Project Page] |  [Paper] | [Bibtex]
 <!-- (https://chail.github.io/latent-composition/) -->
+
 <img src="https://github.com/owenzlz/PA4Inpaint/blob/main/images/teaser.png" style="width:800px;">
 
 **Perceptual Artifacts Localization for Inpainting**\
