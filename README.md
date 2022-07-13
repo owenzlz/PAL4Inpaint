@@ -8,7 +8,7 @@
 *European Conference on Computer Vision (ECCV), 2022, Oral Presentation*\
 [Lingzhi Zhang](https://owenzlz.github.io/), [Yuqian Zhou](https://yzhouas.github.io/), [Connelly Barnes](http://www.connellybarnes.com/work/), [Sohrab Amirghodsi](https://scholar.google.com/citations?user=aFrtZOIAAAAJ&hl=en), [Zhe Lin](https://sites.google.com/site/zhelin625/), [Eli Shechtman](https://research.adobe.com/person/eli-shechtman/), [Jianbo Shi](https://www.cis.upenn.edu/~jshi/)
 
-Note: Due to commercial reasons, we only release our inference code as 'torchscript' format and half of the labeled datasets. 
+Note: Due to commercial reasons, we only release our inference code in 'torchscript' format and half of the labeled datasets. 
 
 ## Prerequisites
 - Linux
@@ -78,5 +78,7 @@ python pa4inpaint.py \
 ```
 
 <img src="https://github.com/owenzlz/PA4Inpaint/blob/main/images/seg_results.png" style="width:800px;">
+
+
 
 
