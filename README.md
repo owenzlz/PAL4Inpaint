@@ -67,3 +67,4 @@ Run the following command for inference.
 bash ...
 ```
 
+<img src="https://github.com/owenzlz/PA4Inpaint/blob/main/images/seg_results.png" style="width:800px;">
