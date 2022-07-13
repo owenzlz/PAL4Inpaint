@@ -64,12 +64,23 @@ Run the following command for inference.
 
 - Predict perceptual artifacts on a single image
 ```bash
-pa4inpaint.py --img_file xxx.jpg --pred_seg_file yyy.jpg --pred_vis_file zzz.jpg
+python pa4inpaint.py \
+--img_file ./test/images/xxx.jpg \
+--pred_seg_file ./test/pred_seg/yyy.png \
+--pred_heatmap_file ./test/pred_heatmap/yyy.png \
+--pred_vis_file ./test/pred_vis/zzz.jpg
 ```
 
 - Predict perceptual artifacts for a batch of images
 ```bash
-pa4inpaint.py --img_dir ./test/images --pred_seg_dir ./test/pred_seg --pred_vis_dir ./test/pred_vis
+python pa4inpaint.py \
+--img_dir ./test/images \
+--pred_seg_dir ./test/pred_seg \
+--pred_heatmap_dir ./test/pred_heatmap \
+--pred_vis_dir ./test/pred_vis
 ```
+
+pred_seg refers to the predicted binary perceptual artifacts. 
+pred_heatmap refers
 
 <img src="https://github.com/owenzlz/PA4Inpaint/blob/main/images/seg_results.png" style="width:800px;">
