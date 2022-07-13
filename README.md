@@ -1,6 +1,6 @@
 # PA4Inpaint
-[Project Page](https://chail.github.io/latent-composition/) |  [Paper] | [Bibtex]
-
+[Project Page] |  [Paper] | [Bibtex]
+<!-- (https://chail.github.io/latent-composition/) -->
 <!-- <img src="https://github.com/owenzlz/EgoHOS/blob/main/stitch.gif" style="width:800px;"> -->
 
 **Perceptual Artifacts Localization for Inpainting**\
