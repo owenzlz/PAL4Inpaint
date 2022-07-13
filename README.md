@@ -33,7 +33,10 @@ bash download_checkpoints.sh
 ```
 
 ## Datasets
-- Download our dataset from GDrive links (), or use the following command line.
+
+<img src="https://github.com/owenzlz/PA4Inpaint/blob/main/images/user_labels.png" style="width:800px;">
+
+- Download our datasets
 ```bash
 bash download_datasets.sh
 ```
