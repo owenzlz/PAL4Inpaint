@@ -62,7 +62,7 @@ After downloading, the dataset is structured as follows:
 
 Run the following command for inference. 
 
-- Predict perceptual artifacts on a single image
+- Inference on a single image
 ```bash
 python pa4inpaint.py \
 --img_file ./test/images/xxx.jpg \
@@ -71,7 +71,7 @@ python pa4inpaint.py \
 --pred_vis_file ./test/pred_vis/zzz.jpg
 ```
 
-- Predict perceptual artifacts for a batch of images
+- Inference on a batch of images
 ```bash
 python pa4inpaint.py \
 --img_dir ./test/images \
@@ -84,3 +84,6 @@ pred_seg refers to the predicted binary perceptual artifacts.
 pred_heatmap refers
 
 <img src="https://github.com/owenzlz/PA4Inpaint/blob/main/images/seg_results.png" style="width:800px;">
+
+
+
