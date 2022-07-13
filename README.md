@@ -8,7 +8,7 @@
 *European Conference on Computer Vision (ECCV), 2022, Oral Presentation*\
 [Lingzhi Zhang](https://owenzlz.github.io/), [Yuqian Zhou](https://yzhouas.github.io/), [Connelly Barnes](http://www.connellybarnes.com/work/), [Sohrab Amirghodsi](https://scholar.google.com/citations?user=aFrtZOIAAAAJ&hl=en), [Zhe Lin](https://sites.google.com/site/zhelin625/), [Eli Shechtman](https://research.adobe.com/person/eli-shechtman/), [Jianbo Shi](https://www.cis.upenn.edu/~jshi/)
 
-Note: Due to the company policy and commercial reasons, we only release our inference code as 'torchscript' format, and will release
+Note: Due to some commercial reasons, we only release our inference code as 'torchscript' format, and will release
 half of the labeled datasets. 
 
 ## Prerequisites
