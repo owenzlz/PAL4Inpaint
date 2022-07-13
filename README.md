@@ -22,7 +22,7 @@ half of the labeled datasets.
 git clone https://github.com/owenzlz/PA4Inpaint
 ```
 
-- Install dependencies (Since we use torchscript, we can bypass the original mmsegmentation packages.):
+- Install dependencies (Since we use torchscript, we can bypass the mmsegmentation packages.):
 ```bash
 pip install torch torchvision
 ```
