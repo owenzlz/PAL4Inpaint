@@ -34,7 +34,30 @@ pip install torch torchvision
 bash download_checkpoints.sh
 ```
 
+## Quick Usage [TODO]
+
+Run the following command for inference. 
+
+- Inference on a single image:
+```bash
+python pa4inpaint.py \
+--img_file ./demo/images/xxx.jpg \
+--result_file ./demo/results/yyy.png
+```
+
+- Inference on a batch of images:
+```bash
+python pa4inpaint.py \
+--img_dir ./demo/images \
+--result_dir ./demo/results
+```
+
+<img src="https://github.com/owenzlz/PA4Inpaint/blob/main/images/seg_results.png" style="width:800px;">
+
+
 ## Datasets
+
+If you want to access our labeled perceptual artifacts localization dataset, you may use the following commands to download. 
 
 <img src="https://github.com/owenzlz/PA4Inpaint/blob/main/images/user_labels.png" style="width:800px;">
 
@@ -62,25 +85,6 @@ After downloading, the dataset is structured as follows:
 
 Note that labels and masks have pixel values 0 or 1. To visualize them clearly, you can multiple the images by 255. 
 
-## Quick Usage [TODO]
-
-Run the following command for inference. 
-
-- Inference on a single image:
-```bash
-python pa4inpaint.py \
---img_file ./demo/images/xxx.jpg \
---result_file ./demo/results/yyy.png
-```
-
-- Inference on a batch of images:
-```bash
-python pa4inpaint.py \
---img_dir ./demo/images \
---result_dir ./demo/results
-```
-
-<img src="https://github.com/owenzlz/PA4Inpaint/blob/main/images/seg_results.png" style="width:800px;">
 
 
 
