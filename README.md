@@ -27,7 +27,7 @@ git clone https://github.com/owenzlz/PA4Inpaint
 pip install torch torchvision
 ```
 
-- Download 'torchscript' checkpoints
+- Download 'torchscript' checkpoints:
 ```bash
 bash download_checkpoints.sh
 ```
@@ -62,7 +62,7 @@ After downloading, the dataset is structured as follows:
 
 Run the following command for inference. 
 
-- Inference on a single image
+- Inference on a single image:
 ```bash
 python pa4inpaint.py \
 --img_file ./test/images/xxx.jpg \
@@ -71,7 +71,7 @@ python pa4inpaint.py \
 --pred_vis_file ./test/pred_vis/zzz.jpg
 ```
 
-- Inference on a batch of images
+- Inference on a batch of images:
 ```bash
 python pa4inpaint.py \
 --img_dir ./test/images \
