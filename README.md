@@ -40,16 +40,16 @@ bash download_datasets.sh
 
 After downloading, the dataset is structured as follows: 
 ```bash
-- [egohos dataset root]
-    |- train
+- [perceptual artifacts dataset root]
+    |- trainset
         |- images
         |- masks
         |- labels
-    |- val 
+    |- valset
         |- images
         |- masks
         |- labels
-    |- test
+    |- testset
         |- images
         |- masks
         |- labels
