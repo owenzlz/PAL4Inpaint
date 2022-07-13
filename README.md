@@ -5,7 +5,7 @@
 <img src="https://github.com/owenzlz/PA4Inpaint/blob/main/images/teaser.png" style="width:800px;">
 
 **Perceptual Artifacts Localization for Inpainting**\
-*European Conference on Computer Vision (ECCV), 2022, Oral*\
+*European Conference on Computer Vision (ECCV), 2022, Oral Presentation*\
 [Lingzhi Zhang](https://owenzlz.github.io/), [Yuqian Zhou](https://yzhouas.github.io/), [Connelly Barnes](http://www.connellybarnes.com/work/), [Sohrab Amirghodsi](https://scholar.google.com/citations?user=aFrtZOIAAAAJ&hl=en), [Zhe Lin](https://sites.google.com/site/zhelin625/), [Eli Shechtman](https://research.adobe.com/person/eli-shechtman/), [Jianbo Shi](https://www.cis.upenn.edu/~jshi/)
 
 Note: Due to the company policy and commercial reasons, we only release our inference code as 'torchscript' format, and will release
@@ -35,21 +35,24 @@ bash download_checkpoints.sh
 ## Datasets
 - Download our dataset from GDrive links (), or use the following command line.
 ```bash
-gdown ...
+bash download_datasets.sh
 ```
 
 After downloading, the dataset is structured as follows: 
 ```bash
 - [egohos dataset root]
     |- train
-        |- image
-        |- label
+        |- images
+        |- masks
+        |- labels
     |- val 
-        |- image
-        |- label
+        |- images
+        |- masks
+        |- labels
     |- test
-        |- image
-        |- label
+        |- images
+        |- masks
+        |- labels
 ```
 
 ## Quick Usage
