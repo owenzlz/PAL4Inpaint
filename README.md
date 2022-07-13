@@ -59,7 +59,7 @@ After downloading, the dataset is structured as follows:
 
 Note that labels and masks have pixel values 0 or 1. To visualize them clearly, you can multiple the images by 255. 
 
-## Quick Usage
+## Quick Usage [TODO]
 
 Run the following command for inference. 
 
