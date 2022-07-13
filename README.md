@@ -62,9 +62,14 @@ After downloading, the dataset is structured as follows:
 
 Run the following command for inference. 
 
-- Predict left and right hands
+- Predict perceptual artifacts on a single image
 ```bash
-bash ...
+pa4inpaint.py --img_file xxx.jpg --pred_seg_file yyy.jpg --pred_vis_file zzz.jpg
+```
+
+- Predict perceptual artifacts for a batch of images
+```bash
+pa4inpaint.py --img_dir ./test/images --pred_seg_dir ./test/pred_seg --pred_vis_dir ./test/pred_vis
 ```
 
 <img src="https://github.com/owenzlz/PA4Inpaint/blob/main/images/seg_results.png" style="width:800px;">
