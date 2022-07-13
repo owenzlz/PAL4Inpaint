@@ -1,4 +1,5 @@
-./ckpt
-
+/ckpt
+/datasets
+/datasets_full
 *.pth
-
+*.png

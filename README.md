@@ -57,6 +57,8 @@ After downloading, the dataset is structured as follows:
         |- labels
 ```
 
+Note that labels and masks have pixel values 0 or 1. To visualize them clearly, you can multiple the images by 255. 
+
 ## Quick Usage
 
 Run the following command for inference. 
@@ -65,24 +67,16 @@ Run the following command for inference.
 ```bash
 python pa4inpaint.py \
 --img_file ./demo/images/xxx.jpg \
---pred_seg_file ./demo/pred_seg/yyy.png \
---pred_heatmap_file ./demo/pred_heatmap/yyy.png \
---pred_vis_file ./demo/pred_vis/zzz.jpg
+--result_file ./demo/results/yyy.png
 ```
 
 - Inference on a batch of images:
 ```bash
 python pa4inpaint.py \
 --img_dir ./demo/images \
---pred_seg_dir ./demo/pred_seg \
---pred_heatmap_dir ./demo/pred_heatmap \
---pred_vis_dir ./demo/pred_vis
+--result_dir ./demo/results
 ```
 
-pred_seg refers to the predicted binary perceptual artifacts. 
-pred_heatmap refers
-
 <img src="https://github.com/owenzlz/PA4Inpaint/blob/main/images/seg_results.png" style="width:800px;">
-
 
 
