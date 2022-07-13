@@ -26,8 +26,7 @@ git clone https://github.com/owenzlz/PA4Inpaint
 pip install torch torchvision
 ```
 
-- Download resources:
-	- we provide a script for downloading the pretrained checkpoints. 
+- Download 'torchscript' checkpoints
 ```bash
 bash download_checkpoints.sh
 ```
