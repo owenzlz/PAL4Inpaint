@@ -8,7 +8,7 @@
 *European Conference on Computer Vision (ECCV), 2022, Oral Presentation*\
 [Lingzhi Zhang](https://owenzlz.github.io/), [Yuqian Zhou](https://yzhouas.github.io/), [Connelly Barnes](http://www.connellybarnes.com/work/), [Sohrab Amirghodsi](https://scholar.google.com/citations?user=aFrtZOIAAAAJ&hl=en), [Zhe Lin](https://sites.google.com/site/zhelin625/), [Eli Shechtman](https://research.adobe.com/person/eli-shechtman/), [Jianbo Shi](https://www.cis.upenn.edu/~jshi/)
 
-Note: Due to some commercial reasons, we only release our inference code as 'torchscript' format, and will release
+Note: Due to commercial reasons, we only release our inference code as 'torchscript' format, and will release
 half of the labeled datasets. 
 
 ## Prerequisites
@@ -65,19 +65,19 @@ Run the following command for inference.
 - Inference on a single image:
 ```bash
 python pa4inpaint.py \
---img_file ./test/images/xxx.jpg \
---pred_seg_file ./test/pred_seg/yyy.png \
---pred_heatmap_file ./test/pred_heatmap/yyy.png \
---pred_vis_file ./test/pred_vis/zzz.jpg
+--img_file ./demo/images/xxx.jpg \
+--pred_seg_file ./demo/pred_seg/yyy.png \
+--pred_heatmap_file ./demo/pred_heatmap/yyy.png \
+--pred_vis_file ./demo/pred_vis/zzz.jpg
 ```
 
 - Inference on a batch of images:
 ```bash
 python pa4inpaint.py \
---img_dir ./test/images \
---pred_seg_dir ./test/pred_seg \
---pred_heatmap_dir ./test/pred_heatmap \
---pred_vis_dir ./test/pred_vis
+--img_dir ./demo/images \
+--pred_seg_dir ./demo/pred_seg \
+--pred_heatmap_dir ./demo/pred_heatmap \
+--pred_vis_dir ./demo/pred_vis
 ```
 
 pred_seg refers to the predicted binary perceptual artifacts. 
