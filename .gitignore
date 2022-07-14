@@ -2,3 +2,5 @@
 /datasets
 /datasets_full
 *.pth
+PA4Inpaint_files_to_release.txt
+files_to_release.py
