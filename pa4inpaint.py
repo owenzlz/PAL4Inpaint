@@ -32,12 +32,12 @@ def numpy2tensor(img):
     img = torch.from_numpy(img).transpose(0,2).transpose(1,2).unsqueeze(0).float()
     return img
 
-def prepare_img(img_file, args):
+def prepare_img(img_file, device):
     img_np = np.array(Image.open(img_file)); H, W = img_np.shape[0], img_np.shape[1]
     mean_img, stdinv_img = get_mean_stdinv(img_np)
-    img_tensor = numpy2tensor(img_np).to(args.device)
-    mean_img_tensor = numpy2tensor(mean_img).to(args.device)
-    stdinv_img_tensor = numpy2tensor(stdinv_img).to(args.device)
+    img_tensor = numpy2tensor(img_np).to(device)
+    mean_img_tensor = numpy2tensor(mean_img).to(device)
+    stdinv_img_tensor = numpy2tensor(stdinv_img).to(device)
     img_tensor = img_tensor - mean_img_tensor
     img_tensor = img_tensor * stdinv_img_tensor
     return img_np, img_tensor
@@ -58,19 +58,18 @@ if __name__ == '__main__':
     os.makedirs(args.results_dir, exist_ok=True)
     
     # Load the Perceptual Artifacts Localization network
-    model = torch.load(args.ckpt_file)
-    model = model.to(args.device)
+    model = torch.load(args.ckpt_file).to(args.device)
 
     # Load images
     if args.single_img:
         
         fname = os.path.basename(args.img_file).split('.')[0]
-        img_np, img_tensor = prepare_img(args.img_file)
+        img_np, img_tensor = prepare_img(args.img_file, args.device)
         seg_logit = model(img_tensor)
         seg_pred = seg_logit.argmax(dim = 1)
         seg_pred_np = seg_pred.cpu().data.numpy()[0]
         seg_pred_np_expand = np.repeat(np.expand_dims(seg_pred_np, 2), 3, 2) * 255.0
-
+        
         imsave(os.path.join(args.results_dir, fname + '_vis.png'), np.hstack([img_np, seg_pred_np_expand]))
 
 
