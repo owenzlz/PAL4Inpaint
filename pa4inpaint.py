@@ -6,11 +6,27 @@ from PIL import Image
 import numpy as np 
 import cv2
 from skimage.io import imsave
-from utils import get_mean_stdinv
 from torch.autograd import Variable
 from tqdm import tqdm
 import argparse
 import os
+
+mean=[123.675, 116.28, 103.53]
+std=[58.395, 57.12, 57.375]
+
+def get_mean_stdinv(img):
+    mean_img = np.zeros((img.shape))
+    mean_img[:,:,0] = mean[0]
+    mean_img[:,:,1] = mean[1]
+    mean_img[:,:,2] = mean[2]
+    mean_img = np.float32(mean_img)
+    std_img = np.zeros((img.shape))
+    std_img[:,:,0] = std[0]
+    std_img[:,:,1] = std[1]
+    std_img[:,:,2] = std[2]
+    std_img = np.float64(std_img)
+    stdinv_img = 1 / np.float32(std_img)
+    return mean_img, stdinv_img
 
 def numpy2tensor(img):
     img = torch.from_numpy(img).transpose(0,2).transpose(1,2).unsqueeze(0).float()
@@ -25,6 +41,8 @@ def prepare_img(img_file, args):
     img_tensor = img_tensor - mean_img_tensor
     img_tensor = img_tensor * stdinv_img_tensor
     return img_tensor
+
+
 
 if __name__ == '__main__':
 
@@ -50,4 +68,6 @@ if __name__ == '__main__':
     seg_pred_np_expand = np.repeat(np.expand_dims(seg_pred_np, 2), 3, 2) * 255.0
 
     imsave('vis_artifacts.png', np.hstack([img, seg_pred_np_expand]))
-    
+
+
+
