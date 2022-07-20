@@ -2,7 +2,7 @@
 [Project Page] |  [Paper] | [Bibtex]
 <!-- (https://chail.github.io/latent-composition/) -->
 
-<img src="https://github.com/owenzlz/SuperCAF/blob/main/supercaf.png" style="width:800px;">
+<img src="https://github.com/owenzlz/PAL4Inpaint/blob/main/images/teaser.png" style="width:800px;">
 
 **Perceptual Artifacts Localization for Inpainting**\
 *European Conference on Computer Vision (ECCV), 2022, Oral Presentation*\
