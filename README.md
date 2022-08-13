@@ -3,7 +3,7 @@
 
 <img src="https://github.com/owenzlz/PAL4Inpaint/blob/main/images/teaser.png" style="width:800px;">
 
-**Perceptual Artifacts Localization for Inpainting**\
+**Perceptual Artifacts Localization for Inpainting**(https://arxiv.org/pdf/2208.03357.pdf)\
 *European Conference on Computer Vision (ECCV), 2022, Oral Presentation*\
 [Lingzhi Zhang](https://owenzlz.github.io/), [Yuqian Zhou](https://yzhouas.github.io/), [Connelly Barnes](http://www.connellybarnes.com/work/), [Sohrab Amirghodsi](https://scholar.google.com/citations?user=aFrtZOIAAAAJ&hl=en), [Zhe Lin](https://sites.google.com/site/zhelin625/), [Eli Shechtman](https://research.adobe.com/person/eli-shechtman/), [Jianbo Shi](https://www.cis.upenn.edu/~jshi/)\
 University of Pennsylvania, Adobe Research/ART
@@ -63,6 +63,8 @@ After downloading, the dataset is structured as follows:
 ```
 
 Note that labels and masks have pixel values 0 or 1. To visualize them, you can multiple the images by 255.
+
+
 
 ## Quick Usage [TODO]
 
