@@ -1,4 +1,4 @@
-# PA4Inpaint
+# PAL4Inpaint
 [Project Page] |  [Paper](https://arxiv.org/pdf/2208.03357.pdf) | [Bibtex](https://scholar.googleusercontent.com/scholar.bib?q=info:Hg82KcKaDdkJ:scholar.google.com/&output=citation&scisdr=CgVB6GfVENSznng6iSo:AAGBfm0AAAAAYvc8kSorKdGBazl9ISGg6_ctvVJSZKcJ&scisig=AAGBfm0AAAAAYvc8kZfAWD_WLA7uXggR-vhUdJqL1ybW&scisf=4&ct=citation&cd=-1&hl=en)
 
 <img src="https://github.com/owenzlz/PAL4Inpaint/blob/main/images/teaser.png" style="width:800px;">
