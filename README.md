@@ -55,8 +55,12 @@ After downloading, the dataset is structured as follows:
         |- labels
 ```
 
-Note that labels and masks have pixel values 0 or 1. To visualize them, you can multiple the images by 255.
+Note that labels and masks have pixel values 0 or 1. To visualize them, you can multiple the images by 255. We provide a simple script 
+to visualize the data. 
 
+```
+python visualize_labels.py
+```
 
 ## Checkpoints
 
