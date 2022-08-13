@@ -70,7 +70,7 @@ bash download_checkpoints.sh
 ```
 
 
-## Perceptual Artifacts Localization on the Inpainted Images
+## Perceptual Artifacts Segmentation
 
 Run the following command for inference. 
 
