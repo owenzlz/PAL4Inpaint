@@ -48,6 +48,15 @@ def inference_on_image(model, img_tensor):
     seg_pred_np = seg_pred.cpu().data.numpy()[0]
     return seg_pred_np
 
+def overlay_seg_on_img(img_np, seg_pred_np, alpha = 0.3):
+    pink = np.zeros((img_np.shape)); pink[:,:,0] = 255; pink[:,:,2] = 255
+    if len(seg_pred_np.shape) == 2:
+        seg_pred_np = np.repeat(np.expand_dims(seg_pred_np, 2), 3, 2)
+    vis = img_np * (1 - seg_pred_np) + alpha * pink * seg_pred_np + (1 - alpha) * img_np * seg_pred_np
+    return vis
+
+
+
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
@@ -71,22 +80,28 @@ if __name__ == '__main__':
 
     # Process images
     if args.img_file is not None:
-        
+
         print('Process a single image...')
+
+        os.makedirs(os.path.dirname(args.output_seg_file), exist_ok = True)
+        os.makedirs(os.path.dirname(args.output_vis_file), exist_ok = True)
+        
         fname = os.path.basename(args.img_file).split('.')[0]
         img_np, img_tensor = prepare_img(args.img_file, args.device)
         seg_pred_np = inference_on_image(model, img_tensor)
-        
+        vis_np = overlay_seg_on_img(img_np, seg_pred_np)
 
-        seg_pred_np_expand = np.repeat(np.expand_dims(seg_pred_np, 2), 3, 2) * 255.0
-
-        imsave(os.path.join(args.results_dir, fname + '_vis.png'), np.hstack([img_np, seg_pred_np_expand]))
+        imsave(args.output_seg_file, seg_pred_np)
+        imsave(args.output_vis_file, np.hstack([img_np, vis_np]))
 
     elif args.img_dir is not None: 
 
         print('Process a batch of images...')
 
+        os.makedirs(args.output_seg_dir, exist_ok = True)
+        os.makedirs(args.output_vis_dir, exist_ok = True)
 
+        
         
     else:
         raise NotImplementedError

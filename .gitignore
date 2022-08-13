@@ -3,7 +3,11 @@
 /datasets_full
 
 /vis_labels
+/testimages
 
 *.pth
 PA4Inpaint_files_to_release.txt
 files_to_release.py
+
+run_pal4inpaint_single.sh
+run_pal4inpaint_batch.sh

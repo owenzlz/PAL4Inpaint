@@ -77,9 +77,9 @@ Run the following command to predict the perceptual artifacts localization on th
 - Inference on a single image:
 ```bash
 python pal4inpaint.py \
-       --img_file ./demo/images/xxx.jpg \
-       --output_seg_file ./demo/results/yyy.png
-       --output_vis_file ./demo/results/yyy.png
+       --img_file ./testimages/images/a_alcove_00004858.png \
+       --output_seg_file ./testimages/seg/a_alcove_00004858.png \
+       --output_vis_file ./testimages/vis/a_alcove_00004858.png
 ```
 
 - Inference on a batch of images:
