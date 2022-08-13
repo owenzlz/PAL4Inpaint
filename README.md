@@ -110,7 +110,7 @@ python par.py --img_dir ./demo/images
 
 ## Iterative Fill [TODO]
 
-- Localize artifacts segmentation region and fill on it iteratively. 
+- Localize perceptual artifacts region and run inpainting on it iteratively. 
 ```bash
 python iterative_fill.py
 ```
