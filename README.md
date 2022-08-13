@@ -111,7 +111,7 @@ python par.py --img_dir ./demo/images
 
 ## Iterative Fill 
 
-- Compute artifacts segmentation and fill on the artifacts region iteratively. 
+- Localize artifacts segmentation region and fill on it iteratively. 
 ```bash
 ...
 ```
