@@ -1,6 +1,5 @@
 # PA4Inpaint
-[Project Page] |  [Paper] | [Bibtex]
-<!-- (https://chail.github.io/latent-composition/) -->
+[Project Page] |  [Paper](https://arxiv.org/pdf/2208.03357.pdf) | [Bibtex]
 
 <img src="https://github.com/owenzlz/PAL4Inpaint/blob/main/images/teaser.png" style="width:800px;">
 
@@ -87,6 +86,16 @@ After downloading, the dataset is structured as follows:
 Note that labels and masks have pixel values 0 or 1. To visualize them clearly, you can multiple the images by 255. 
 
 
+### Citation
+If you use this code for your research, please cite our paper:
+```
+@article{zhang2022perceptual,
+  title={Perceptual Artifacts Localization for Inpainting},
+  author={Zhang, Lingzhi and Zhou, Yuqian and Barnes, Connelly and Amirghodsi, Sohrab and Lin, Zhe and Shechtman, Eli and Shi, Jianbo},
+  journal={arXiv preprint arXiv:2208.03357},
+  year={2022}
+}
+```
 
 
 

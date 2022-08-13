@@ -49,7 +49,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--device', default=0, type=int)
     parser.add_argument('--ckpt_file', default='./ckpt/best_mIoU_iter_1800_torchscript.pth', type=str)
-    parser.add_argument('--single_img', default=True, type=bool)
+    parser.add_argument('--batch_mode', default=False, type=bool)
     parser.add_argument('--img_file', default='./demo/images/a_amusement_park_00000006.png', type=str)
     parser.add_argument('--img_folder', default='./demo/images', type=str)
     parser.add_argument('--results_dir', default='./demo/results', type=str)
@@ -60,18 +60,22 @@ if __name__ == '__main__':
     # Load the Perceptual Artifacts Localization network
     model = torch.load(args.ckpt_file).to(args.device)
 
-    # Load images
-    if args.single_img:
+    # Process images
+    if not args.batch_mode:
         
+        print('Process a single image...')
+
         fname = os.path.basename(args.img_file).split('.')[0]
         img_np, img_tensor = prepare_img(args.img_file, args.device)
         seg_logit = model(img_tensor)
         seg_pred = seg_logit.argmax(dim = 1)
         seg_pred_np = seg_pred.cpu().data.numpy()[0]
         seg_pred_np_expand = np.repeat(np.expand_dims(seg_pred_np, 2), 3, 2) * 255.0
-        
+
         imsave(os.path.join(args.results_dir, fname + '_vis.png'), np.hstack([img_np, seg_pred_np_expand]))
 
+    else: 
 
+        print('Process a batch of images...')
 
-
+        
