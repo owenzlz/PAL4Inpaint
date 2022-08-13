@@ -70,7 +70,7 @@ bash download_checkpoints.sh
 ```
 
 
-## Quick Usage
+## Inference on Inpainted Images
 
 Run the following command for inference. 
 
@@ -91,6 +91,23 @@ python pa4inpaint.py \
 
 
 <!-- <img src="https://github.com/owenzlz/PA4Inpaint/blob/main/images/seg_results.png" style="width:800px;"> -->
+
+
+
+## Compute Perceptual Artifacts Ratio (PAR)
+
+```bash
+...
+```
+
+
+## Run Iterative Fill with LaMa Model
+
+```bash
+...
+```
+
+
 
 
 
