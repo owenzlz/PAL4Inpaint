@@ -70,20 +70,21 @@ bash download_checkpoints.sh
 ```
 
 
+
 ## Perceptual Artifacts Segmentation
 
 Run the following command for inference. 
 
 - Inference on a single image:
 ```bash
-python pa4inpaint.py \
+python pal4inpaint.py \
        --img_file ./demo/images/xxx.jpg \
        --result_file ./demo/results/yyy.png
 ```
 
 - Inference on a batch of images:
 ```bash
-python pa4inpaint.py \
+python pal4inpaint.py \
        --img_dir ./demo/images \
        --result_dir ./demo/results
 ```
@@ -97,17 +98,18 @@ python pa4inpaint.py \
 ## Perceptual Artifacts Ratio (PAR)
 
 ```bash
-...
+python par.py --img_file ./demo/images/xxx.jpg
 ```
 
+```bash
+python par.py --img_dir ./demo/images
+```
 
 ## Iterative Fill 
 
 ```bash
 ...
 ```
-
-
 
 
 
