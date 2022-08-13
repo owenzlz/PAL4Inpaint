@@ -70,7 +70,7 @@ bash download_checkpoints.sh
 ```
 
 
-## Inference on Inpainted Images
+## Perceptual Artifacts Localization on the Inpainted Images
 
 Run the following command for inference. 
 
@@ -101,7 +101,7 @@ python pa4inpaint.py \
 ```
 
 
-## Run Iterative Fill with LaMa Model
+## Run Iterative Fill
 
 ```bash
 ...
