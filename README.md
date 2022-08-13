@@ -64,7 +64,7 @@ python visualize_labels.py
 
 ## Checkpoints
 
-- Download 'torchscript' checkpoints:
+- Download checkpoints in the 'torchscript' format:
 ```bash
 bash download_checkpoints.sh
 ```
