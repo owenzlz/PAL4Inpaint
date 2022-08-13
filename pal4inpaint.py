@@ -9,6 +9,7 @@ from skimage.io import imsave
 from torch.autograd import Variable
 from tqdm import tqdm
 import argparse
+import glob
 import os
 
 mean=[123.675, 116.28, 103.53]
@@ -79,7 +80,7 @@ if __name__ == '__main__':
     model = torch.load(args.ckpt_file).to(args.device)
 
     # Process images
-    if args.img_file is not None:
+    if args.img_file is not '':
 
         print('Process a single image...')
 
@@ -94,14 +95,21 @@ if __name__ == '__main__':
         imsave(args.output_seg_file, seg_pred_np)
         imsave(args.output_vis_file, np.hstack([img_np, vis_np]))
 
-    elif args.img_dir is not None: 
+    elif args.img_dir is not '': 
 
         print('Process a batch of images...')
 
         os.makedirs(args.output_seg_dir, exist_ok = True)
         os.makedirs(args.output_vis_dir, exist_ok = True)
 
-        
+        for img_file in tqdm(glob.glob(args.img_dir + '/*')):
+            fname = os.path.basename(img_file)
+            img_np, img_tensor = prepare_img(img_file, args.device)
+            seg_pred_np = inference_on_image(model, img_tensor)
+            vis_np = overlay_seg_on_img(img_np, seg_pred_np)
+
+            imsave(os.path.join(args.output_seg_dir, fname), seg_pred_np)
+            imsave(os.path.join(args.output_vis_dir, fname), np.hstack([img_np, vis_np]))
         
     else:
         raise NotImplementedError
