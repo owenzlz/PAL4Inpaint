@@ -48,7 +48,7 @@ bash download_datasets.sh
 After downloading, the dataset is structured as follows: 
 ```bash
 - [perceptual artifacts dataset root]
-    |- trainset
+    |- trainset_subset
         |- images
         |- masks
         |- labels
