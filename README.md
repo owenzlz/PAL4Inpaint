@@ -117,8 +117,8 @@ python par.py --img_dir ./demo/images
 
 <img src="https://github.com/owenzlz/PA4Inpaint/blob/main/demo/iterative_fill.png" style="width:900px;">
 
-(The blue contour in the first image indicates the original hole, and the pink contours in each images indicated the 
-segmented perceptual artifacts region at each iterative fill. )
+The blue contour in the first image indicates the original hole, and the pink contours in each images indicated the 
+segmented perceptual artifacts region at each iterative fill.
 
 ### Citation
 If you use this code for your research, please cite our paper:
