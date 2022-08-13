@@ -91,7 +91,7 @@ python pal4inpaint.py \
 ```
 
 
-<!-- <img src="https://github.com/owenzlz/PA4Inpaint/blob/main/images/seg_results.png" style="width:800px;"> -->
+<img src="https://github.com/owenzlz/PA4Inpaint/blob/main/demo/artifacts_seg.gif" style="width:800px;">
 
 
 ## Perceptual Artifacts Ratio (PAR)
