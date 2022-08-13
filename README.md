@@ -30,7 +30,7 @@ pip install torch torchvision
 
 You can download our labeled datasets using the following command. 
 
-<img src="https://github.com/owenzlz/PA4Inpaint/blob/main/images/user_labels.png" style="width:800px;">
+<img src="https://github.com/owenzlz/PA4Inpaint/blob/main/images/user_labels.png" style="width:600px;">
 
 - Download our datasets
 ```bash
