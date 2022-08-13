@@ -107,8 +107,11 @@ python par.py --img_file ./demo/images/xxx.jpg
 python par.py --img_dir ./demo/images
 ```
 
+
+
 ## Iterative Fill 
 
+- Compute artifacts segmentation and fill on the artifacts region iteratively. 
 ```bash
 ...
 ```
