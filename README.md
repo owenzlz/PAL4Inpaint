@@ -94,7 +94,7 @@ python pal4inpaint.py \
 <img src="https://github.com/owenzlz/PA4Inpaint/blob/main/demo/artifacts_seg.gif" style="width:900px;">
 
 
-## Perceptual Artifacts Ratio (PAR)
+## Perceptual Artifacts Ratio (PAR) [TODO]
 
 - Compute PAR metric on a single image: 
 ```bash
@@ -108,11 +108,11 @@ python par.py --img_dir ./demo/images
 
 
 
-## Iterative Fill 
+## Iterative Fill [TODO]
 
 - Localize artifacts segmentation region and fill on it iteratively. 
 ```bash
-...
+python iterative_fill.py
 ```
 
 <img src="https://github.com/owenzlz/PA4Inpaint/blob/main/demo/iterative_fill.png" style="width:900px;">
