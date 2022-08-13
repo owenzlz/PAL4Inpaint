@@ -59,7 +59,7 @@ if __name__ == '__main__':
     
     # Load the Perceptual Artifacts Localization network
     model = torch.load(args.ckpt_file).to(args.device)
-
+    
     # Process images
     if not args.batch_mode:
         

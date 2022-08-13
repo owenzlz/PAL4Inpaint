@@ -79,15 +79,18 @@ Run the following command for inference.
 ```bash
 python pal4inpaint.py \
        --img_file ./demo/images/xxx.jpg \
-       --result_file ./demo/results/yyy.png
+       --output_seg_file ./demo/results/yyy.png
+       --output_vis_file ./demo/results/yyy.png
 ```
 
 - Inference on a batch of images:
 ```bash
 python pal4inpaint.py \
        --img_dir ./demo/images \
-       --result_dir ./demo/results
+       --output_seg_dir ./demo/results/seg
+       --output_vis_dir ./demo/results/vis
 ```
+
 
 
 <!-- <img src="https://github.com/owenzlz/PA4Inpaint/blob/main/images/seg_results.png" style="width:800px;"> -->
