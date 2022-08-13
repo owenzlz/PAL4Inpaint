@@ -84,7 +84,9 @@ python pa4inpaint.py \
 --result_dir ./demo/results
 ```
 
-<img src="https://github.com/owenzlz/PA4Inpaint/blob/main/images/seg_results.png" style="width:800px;">
+
+
+<!-- <img src="https://github.com/owenzlz/PA4Inpaint/blob/main/images/seg_results.png" style="width:800px;"> -->
 
 
 
