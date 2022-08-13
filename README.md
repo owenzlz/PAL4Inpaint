@@ -28,8 +28,7 @@ pip install torch torchvision
 
 ## Datasets
 
-If you want to access our labeled perceptual artifacts localization dataset, you may use the following commands to download. Running 
-inference code does not require to download this. 
+You can download our labeled datasets using the following command. 
 
 <img src="https://github.com/owenzlz/PA4Inpaint/blob/main/images/user_labels.png" style="width:800px;">
 
