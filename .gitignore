@@ -1,6 +1,9 @@
 /ckpt
 /datasets
 /datasets_full
+
+/vis_labels
+
 *.pth
 PA4Inpaint_files_to_release.txt
 files_to_release.py
