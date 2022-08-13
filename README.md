@@ -94,14 +94,14 @@ python pa4inpaint.py \
 
 
 
-## Compute Perceptual Artifacts Ratio (PAR)
+## Perceptual Artifacts Ratio (PAR)
 
 ```bash
 ...
 ```
 
 
-## Run Iterative Fill
+## Iterative Fill 
 
 ```bash
 ...
