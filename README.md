@@ -90,17 +90,17 @@ python pal4inpaint.py \
 ```
 
 
-
 <!-- <img src="https://github.com/owenzlz/PA4Inpaint/blob/main/images/seg_results.png" style="width:800px;"> -->
-
 
 
 ## Perceptual Artifacts Ratio (PAR)
 
+- Compute PAR on a single image: 
 ```bash
 python par.py --img_file ./demo/images/xxx.jpg
 ```
 
+- Compute PAR on a batch of images: 
 ```bash
 python par.py --img_dir ./demo/images
 ```
