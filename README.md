@@ -26,13 +26,6 @@ git clone https://github.com/owenzlz/PA4Inpaint
 pip install torch torchvision
 ```
 
-## Checkpoints
-
-- Download 'torchscript' checkpoints:
-```bash
-bash download_checkpoints.sh
-```
-
 ## Datasets
 
 If you want to access our labeled perceptual artifacts localization dataset, you may use the following commands to download. Running 
@@ -65,6 +58,13 @@ After downloading, the dataset is structured as follows:
 Note that labels and masks have pixel values 0 or 1. To visualize them, you can multiple the images by 255.
 
 
+## Checkpoints
+
+- Download 'torchscript' checkpoints:
+```bash
+bash download_checkpoints.sh
+```
+
 
 ## Quick Usage
 
@@ -73,21 +73,20 @@ Run the following command for inference.
 - Inference on a single image:
 ```bash
 python pa4inpaint.py \
-    --img_file ./demo/images/xxx.jpg \
-    --result_file ./demo/results/yyy.png
+       --img_file ./demo/images/xxx.jpg \
+       --result_file ./demo/results/yyy.png
 ```
 
 - Inference on a batch of images:
 ```bash
 python pa4inpaint.py \
-    --img_dir ./demo/images \
-    --result_dir ./demo/results
+       --img_dir ./demo/images \
+       --result_dir ./demo/results
 ```
 
 
 
 <!-- <img src="https://github.com/owenzlz/PA4Inpaint/blob/main/images/seg_results.png" style="width:800px;"> -->
-
 
 
 
