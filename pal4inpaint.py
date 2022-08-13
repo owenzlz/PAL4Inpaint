@@ -42,40 +42,51 @@ def prepare_img(img_file, device):
     img_tensor = img_tensor * stdinv_img_tensor
     return img_np, img_tensor
 
-
+def inference_on_image(model, img_tensor):
+    seg_logit = model(img_tensor)
+    seg_pred = seg_logit.argmax(dim = 1)
+    seg_pred_np = seg_pred.cpu().data.numpy()[0]
+    return seg_pred_np
 
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
     parser.add_argument('--device', default=0, type=int)
     parser.add_argument('--ckpt_file', default='./ckpt/best_mIoU_iter_1800_torchscript.pth', type=str)
-    parser.add_argument('--batch_mode', default=False, type=bool)
-    parser.add_argument('--img_file', default='./demo/images/a_amusement_park_00000006.png', type=str)
-    parser.add_argument('--img_folder', default='./demo/images', type=str)
-    parser.add_argument('--results_dir', default='./demo/results', type=str)
-    args = parser.parse_args()
 
-    os.makedirs(args.results_dir, exist_ok=True)
+    # arguments needed for single image testing
+    parser.add_argument('--img_file', default='', type=str)
+    parser.add_argument('--output_seg_file', default='', type=str)
+    parser.add_argument('--output_vis_file', default='', type=str)
+
+    # arguments needed for batch testing
+    parser.add_argument('--img_dir', default='', type=str)
+    parser.add_argument('--output_seg_dir', default='', type=str)
+    parser.add_argument('--output_vis_dir', default='', type=str)
+
+    args = parser.parse_args()
     
     # Load the Perceptual Artifacts Localization network
     model = torch.load(args.ckpt_file).to(args.device)
-    
+
     # Process images
-    if not args.batch_mode:
+    if args.img_file is not None:
         
         print('Process a single image...')
-
         fname = os.path.basename(args.img_file).split('.')[0]
         img_np, img_tensor = prepare_img(args.img_file, args.device)
-        seg_logit = model(img_tensor)
-        seg_pred = seg_logit.argmax(dim = 1)
-        seg_pred_np = seg_pred.cpu().data.numpy()[0]
+        seg_pred_np = inference_on_image(model, img_tensor)
+        
+
         seg_pred_np_expand = np.repeat(np.expand_dims(seg_pred_np, 2), 3, 2) * 255.0
 
         imsave(os.path.join(args.results_dir, fname + '_vis.png'), np.hstack([img_np, seg_pred_np_expand]))
 
-    else: 
+    elif args.img_dir is not None: 
 
         print('Process a batch of images...')
 
+
         
+    else:
+        raise NotImplementedError

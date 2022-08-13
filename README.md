@@ -73,7 +73,7 @@ bash download_checkpoints.sh
 
 ## Perceptual Artifacts Segmentation
 
-Run the following command for inference. 
+Run the following command to predict the perceptual artifacts localization on the inpainted images. 
 
 - Inference on a single image:
 ```bash
