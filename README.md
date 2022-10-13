@@ -86,7 +86,7 @@ python pal4inpaint.py \
 ```bash
 python pal4inpaint.py \
        --img_dir ./demo/images \
-       --output_seg_dir ./demo/results/seg
+       --output_seg_dir ./demo/results/seg \
        --output_vis_dir ./demo/results/vis
 ```
 
