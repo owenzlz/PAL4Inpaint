@@ -1,3 +1,5 @@
+# AdobePatentID="11288
+
 import torch
 import torch.optim as optim
 import torch.nn.functional as F
